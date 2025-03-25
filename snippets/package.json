@@ -1,26 +1,31 @@
 {
-	"name": "example-snippets",
-	"contributes": {
-		"snippets": [
-			{
-				"language": [
-					"html"
-				],
-				"path": "./elements.json"
-			},
-			{
-				"language": [
-					"html"
-				],
-				"path": "./build.json"
-			},
-			{
-				"language": [
-					"html"
-				],
-				"path": "./scripts.json"
-			}
-			
-		]
-	}
+  "name": "example-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "js", "javascript"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./elements.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./build.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./scripts.json"
+      }
+    ]
+  }
 }

@@ -1,0 +1,16 @@
+{
+    "condole.log()": {
+        "prefix": "cl",
+        "body": [
+            "console.log($1)"
+        ],
+        "discription": ""
+    },
+    "condole.log(\"\")": {
+        "prefix": "cls",
+        "body": [
+            "console.log(`$1`)"
+        ],
+        "discription": ""
+    }
+}
