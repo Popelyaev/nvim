@@ -1,5 +1,6 @@
 _G.vim = vim
 
+vim.g.html5_css_completions = 1
 vim.opt.expandtab = true
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -10,6 +11,11 @@ vim.opt.shiftwidth = 3
 vim.smartindent = true
 vim.opt.wrap = false
 vim.g.mapleader = " "
+
+vim.o.foldmethod = "indent" -- Сворачивание по отступам (как в VS Code)
+vim.o.foldenable = true     -- Включить сворачивание
+vim.o.foldlevel = 99        -- Открывать файлы развернутыми
+vim.o.foldlevelstart = 99   -- То же самое
 
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
 vim.cmd("highlight NonText guibg=NONE ctermbg=NONE")

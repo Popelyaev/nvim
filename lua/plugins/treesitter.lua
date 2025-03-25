@@ -22,7 +22,7 @@ return {
     config = function()
       require'nvim-treesitter.configs'.setup {
         ensure_installed = {
-          "html", "css", "javascript", "html", "css"  -- Устанавливаем нужные языки
+          "lua", "javascript", "html", "css"  -- Устанавливаем нужные языки
         },
         highlight = {
           enable = true,  -- Включаем подсветку синтаксиса
