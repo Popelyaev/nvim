@@ -1,5 +1,6 @@
 -- neo-tree --
 vim.keymap.set('n', '<leader>e', ':Neotree toggle <CR>', {})
+vim.keymap.set('n', '<leader>a', ':Alpha <CR>', {})
 
 -- main --
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
