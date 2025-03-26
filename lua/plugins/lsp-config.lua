@@ -43,24 +43,28 @@ return {
                "typescript",
                "javascriptreact",
                "typescriptreact",
+               "css",
             },
          })
          lspconfig.emmet_language_server.setup({
             capabilities = capabilities,
-            filetypes = {
-               "html",
-               "css",
-               "scss",
-               "javascriptreact",
-               "typescriptreact",
+            filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "svelte" },
+            init_options = {
+               showexpandedabbreviation = "always",
+               syntaxProfiles = { html = "html" },
+               variables = {},
+               embeddedLanguages = {
+                  css = true, -- Включаем поддержку CSS внутри <style>
+                  javascript = true,
+               },
             },
-        })
+         })
          lspconfig.cssls.setup({
             capabilities = capabilities,
             filetypes = {
                "css",
                "scss",
-               -- "html",
+               "html",
             },
             settings = {
                css = { validate = true },

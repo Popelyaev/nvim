@@ -12,5 +12,25 @@
             "console.log(`$1`)"
         ],
         "discription": ""
+    },
+    "setTimeOut": {
+        "prefix": "sto",
+        "body": [
+            
+            "setTimeout(()=> {",
+            "   console.log(`Promise`)",
+            "},$1)"
+        ],
+        "discription": ""
+    },
+    "forEach": {
+        "prefix": "fe",
+        "body": [
+            
+            "$1.forEach(element => {",
+            "   $2", 
+            "})"
+        ],
+        "discription": ""
     }
 }
