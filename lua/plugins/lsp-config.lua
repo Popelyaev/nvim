@@ -43,7 +43,6 @@ return {
                "typescript",
                "javascriptreact",
                "typescriptreact",
-               "html",
             },
          })
          lspconfig.emmet_language_server.setup({
