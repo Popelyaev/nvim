@@ -21,7 +21,7 @@ return {
       },
       config = function()
          require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "ts_ls", "html", "emmet_ls", "cssls" },
+            ensure_installed = { "lua_ls", "ts_ls", "emmet_language_server", "cssls" },
          })
       end,
    },
@@ -32,24 +32,37 @@ return {
          local capabilities = require("cmp_nvim_lsp").default_capabilities()
          lspconfig.lua_ls.setup({
             capabilities = capabilities,
+            filetypes = {
+               "lua",
+            },
          })
          lspconfig.ts_ls.setup({
             capabilities = capabilities,
-            filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "html" }, -- Включаем поддержку HTML
-            init_options = {
-               provideFormatter = false,
+            filetypes = {
+               "javascript",
+               "typescript",
+               "javascriptreact",
+               "typescriptreact",
+               "html",
             },
          })
-         lspconfig.html.setup({
+         lspconfig.emmet_language_server.setup({
             capabilities = capabilities,
-         })
-         lspconfig.emmet_ls.setup({
-            capabilities = capabilities,
-            filetypes = { "html" },
-         })
+            filetypes = {
+               "html",
+               "css",
+               "scss",
+               "javascriptreact",
+               "typescriptreact",
+            },
+        })
          lspconfig.cssls.setup({
             capabilities = capabilities,
-            filetypes = { "css", "scss", "html" },
+            filetypes = {
+               "css",
+               "scss",
+               -- "html",
+            },
             settings = {
                css = { validate = true },
                scss = { validate = true },
