@@ -17,10 +17,10 @@ return {
          }
       })
       vim.cmd([[
-  highlight Normal guibg=NONE ctermbg=NONE
-  highlight NormalNC guibg=NONE ctermbg=NONE
-  highlight NeoTreeNormal guibg=NONE ctermbg=NONE
-  highlight NeoTreeNormalNC guibg=NONE ctermbg=NONE
+  "highlight Normal guibg=NONE ctermbg=NONE
+  "highlight NormalNC guibg=NONE ctermbg=NONE
+  "highlight NeoTreeNormal guibg=NONE ctermbg=NONE
+  "highlight NeoTreeNormalNC guibg=NONE ctermbg=NONE
 ]])
    end
 }

@@ -6,7 +6,7 @@ return {
       null_ls.setup({
          sources = { -- исправлено source → sources
             null_ls.builtins.formatting.stylua,
-            null_ls.builtins.formatting.prettier,
+            null_ls.builtins.formatting.prettier
          },
       })
 

@@ -15,7 +15,7 @@ return {
    },
    {
       "williamboman/mason-lspconfig.nvim",
-      lazy = false,
+      -- lazy = false,
       opts = {
          auto_install = true,
       },
@@ -37,6 +37,11 @@ return {
             },
          })
          lspconfig.ts_ls.setup({
+            on_attach = function(client, bufnr)
+               -- Отключаем автозапуск форматирования в ts_ls
+               client.server_capabilities.documentFormattingProvider = false
+               client.server_capabilities.documentRangeFormattingProvider = false
+            end,
             capabilities = capabilities,
             filetypes = {
                "javascript",
@@ -44,20 +49,18 @@ return {
                "javascriptreact",
                "typescriptreact",
                "css",
+               "html",
             },
          })
          lspconfig.emmet_language_server.setup({
             capabilities = capabilities,
             filetypes = { "html", "css", "javascriptreact", "typescriptreact", "vue", "svelte" },
             init_options = {
-               showexpandedabbreviation = "always",
-               syntaxProfiles = { html = "html" },
-               variables = {},
+               --- Настройки для работы в тегах <style>
                embeddedLanguages = {
-                  css = true, -- Включаем поддержку CSS внутри <style>
-                  javascript = true,
-               },
-            },
+                  css = true
+               }
+            }
          })
          lspconfig.cssls.setup({
             capabilities = capabilities,
@@ -66,12 +69,10 @@ return {
                "scss",
                "html",
             },
-            settings = {
-               css = { validate = true },
-               scss = { validate = true },
+            init_options = {
+               embeddedLanguages = { css = true }, -- Важно!
             },
          })
-
          vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
          vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
       end,

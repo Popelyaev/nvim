@@ -10,7 +10,7 @@
       },
       {
         "language": [
-          "html"
+          "html", "php"
         ],
         "path": "./elements.json"
       },
