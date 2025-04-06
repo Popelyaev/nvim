@@ -9,6 +9,7 @@ vim.opt.softtabstop = 3
 vim.opt.shiftwidth = 3
 vim.smartindent = true
 vim.opt.wrap = false
+vim.opt.termguicolors = true
 vim.g.netrw_banner = 0
 -- vim.g.netrw_liststyle = 3
 -- vim.g.netrw_browse_split = 0
