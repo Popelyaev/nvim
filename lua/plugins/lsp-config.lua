@@ -21,7 +21,7 @@ return {
       },
       config = function()
          require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "ts_ls", "emmet_language_server", "cssls" },
+            ensure_installed = { "lua_ls", "ts_ls", "emmet_language_server", "cssls", "powershell_es" },
          })
       end,
    },
@@ -35,6 +35,9 @@ return {
             filetypes = {
                "lua",
             },
+         })
+         lspconfig.powershell_es.setup({
+            capabilities = capabilities,
          })
          lspconfig.ts_ls.setup({
             on_attach = function(client, bufnr)

@@ -17,15 +17,14 @@ vim.g.netrw_banner = 0
 -- vim.g.netrw_winsize = 25
 vim.g.mapleader = " "
 
-
 require("config.lazy")
 require("config.keymaps")
 
 vim.cmd("colorscheme catppuccin")
 
 -- Создаем команду :bobob, которая будет выполнять те же самые highlight команды
-vim.api.nvim_create_user_command('HighlightNone', function()
-  vim.cmd([[
+vim.api.nvim_create_user_command("HighlightNone", function()
+	vim.cmd([[
     highlight Normal guibg=NONE ctermbg=NONE
     highlight NonText guibg=NONE ctermbg=NONE
     highlight EndOfBuffer guibg=NONE ctermbg=NONE
