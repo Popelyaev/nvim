@@ -7,12 +7,15 @@ return {
 			sources = { -- исправлено source → sources
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.shfmt,
-            null_ls.builtins.formatting.prettier.with({
+				null_ls.builtins.formatting.prettier.with({
 					extra_args = {
-						"--tab-width", "3",       -- Устанавливаем ширину таба в 3 пробела
-						"--use-tabs", "false",    -- Используем пробелы вместо табов
+						"--tab-width",
+						"3", -- Устанавливаем ширину таба в 3 пробела
+						"--use-tabs",
+						"false", -- Используем пробелы вместо табов
 					},
-					filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+					-- filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+                     filetypes = { "html", "css", "javascript", "typescript" },
 				}),
 			},
 		})
