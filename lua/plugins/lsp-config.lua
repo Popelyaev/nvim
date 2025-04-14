@@ -21,7 +21,7 @@ return {
       },
       config = function()
          require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "ts_ls", "emmet_language_server", "cssls", "powershell_es" },
+            ensure_installed = { "lua_ls", "ts_ls", "emmet_language_server", "cssls", "html", "jsonls", "powershell_es" },
          })
       end,
    },
@@ -75,6 +75,12 @@ return {
             init_options = {
                embeddedLanguages = { css = true }, -- Важно!
             },
+         })
+         lspconfig.html.setup({
+            capabilities = capabilities,
+         })
+         lspconfig.jsonls.setup({
+            capabilities = capabilities,
          })
          vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
          vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
