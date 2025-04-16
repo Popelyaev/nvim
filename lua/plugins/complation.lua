@@ -61,7 +61,6 @@ return {
 					{ name = "buffer" }, -- Подсказки из текущего файла
 					{ name = "path" }, -- Пути к файлам
 					{ name = "luasnip" }, -- Snippets
-					{ name = "emmet_language_server" }, -- Snippets
 				}),
 			})
 		end,
