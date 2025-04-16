@@ -81,7 +81,6 @@ return {
     },
     {
         "navarasu/onedark.nvim",
-        priority = 1001,
         -- Lua
         config = function()
             require('onedark').setup {
@@ -115,8 +114,25 @@ return {
                 -- Custom Highlights --
                 colors = {}, -- Override default colors
                 highlights = {
-                    ["@tag"] = { fg = "#E06C75" },
-                    ["@tag.delimiter"] = { fg = "#ffffff" }
+                    ["@tag"]            = { fg = "#E06C75" },
+                    ["@tag.delimiter"]  = { fg = "#ffffff" },
+                    ["@selector.class"] = { fg = "#D19A66" },
+                    ["@selector.id"]    = { fg = "#61AFEF" },
+                    ["@selector.tag"]   = { fg = "#E06C75" },
+                    ["@property"]       = { fg = "#ffffff" },
+                    ["@property.name"]  = { fg = "#ffffff" },
+                    ["@number"]         = { fg = "#D19A66" },
+                    ["@string"]         = { fg = "#D19A66" },
+
+                    NeoTreeDirectoryName = { fg = "#ffffff" },
+                    NeoTreeFileName      = { fg = "#ffffff" },
+
+                    -- NeoTreeGitAdded      = { fg = "#ffffff" },
+                    -- NeoTreeGitDeleted    = { fg = "#ffffff" },
+                    -- NeoTreeGitModified   = { fg = "#ffffff" },
+                    -- NeoTreeGitConflict   = { fg = "#ffffff" },
+                    -- NeoTreeGitUntracked  = { fg = "#ffffff" },
+                    -- ["@"] = { fg = "#E06C75" },
                 }, -- Override highlight groups
 
                 -- Plugins Config --
