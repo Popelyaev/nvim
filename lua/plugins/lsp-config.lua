@@ -69,10 +69,6 @@ return {
                 capabilities = capabilities,
             })
 
-            -- lspconfig.superhtml.setup({
-            --     capabilities = capabilities,
-            -- })
-
             lspconfig.jsonls.setup({
                 capabilities = capabilities,
             })
