@@ -4,10 +4,9 @@ require("config.keymaps")
 require("config.options")
 require("config.lazy")
 
-
 vim.cmd("colorscheme onedark")
 vim.api.nvim_create_user_command("HighlightNone", function()
-	vim.cmd([[
+    vim.cmd([[
     highlight Normal guibg=NONE ctermbg=NONE
     highlight NonText guibg=NONE ctermbg=NONE
     highlight EndOfBuffer guibg=NONE ctermbg=NONE
@@ -25,5 +24,21 @@ vim.api.nvim_create_user_command("HighlightNone", function()
     highlight NeoTreeNormalNC guibg=NONE ctermbg=NONE
   ]])
 end, {})
+
+-- Глобальная переменная для отслеживания состояния
+local is_transparent = true
+
+-- Функция переключения
+function ToggleTransparent()
+    is_transparent = not is_transparent
+    require("onedark").setup({
+        style = "dark",
+        transparent = is_transparent,
+    })
+    require("onedark").load()
+end
+
+-- Горячая клавиша (например, <leader>tt)
+vim.keymap.set("n", "<leader>u", ToggleTransparent, { desc = "Toggle transparency" })
 
 -- vim.cmd("HighlightNone")

@@ -86,7 +86,7 @@ return {
             require("onedark").setup({
                 -- Main options --
                 style = "dark",   -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-                transparent = false, -- Show/hide background
+                transparent = true, -- Show/hide background
                 term_colors = true, -- Change terminal color as per the selected theme style
                 ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
                 cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
@@ -119,20 +119,32 @@ return {
                 highlights = {
                     ["@tag"] = { fg = "$red" },
                     ["@tag.delimiter"] = { fg = "$white" },
-                    ["@selector"] = { fg = "$white" },
-                    ["@selector.class"] = { fg = "#D19A66" },
-                    ["@selector.id"] = { fg = "#61AFEF" },
-                    ["@selector.tag"] = { fg = "$red" },
+                    ["@tag.css"] = { fg = "$red" },
+                    ["@type.tag.css"] = { fg = "$red" },
+                    ["@property.id.css"] = { fg = "#61AFEE" },
+                    ["@property.class.css"] = { fg = "#D19A66" },
                     ["@property"] = { fg = "#ffffff" },
                     ["@property.name"] = { fg = "#ffffff" },
-                    ["@number"] = { fg = "#D19A66" },
+                    ["@number"] = { fg = "$red" },
                     ["@string"] = { fg = "#D19A66" },
+                    ["@markup.heading.1.html"] = { fg = "$white" },
+                    ["@markup.heading.2.html"] = { fg = "$white" },
+                    ["@markup.heading.3.html"] = { fg = "$white" },
+                    ["@markup.heading.4.html"] = { fg = "$white" },
+                    ["@markup.heading.5.html"] = { fg = "$white" },
+                    ["@markup.heading.6.html"] = { fg = "$white" },
+                    ["@markup.heading.html"] = { fg = "$white" },
+                    ["@string.html"] = { fg = "#95BF79" },
+                    ["@string.javascript"] = { fg = "#95BF79" },
+                    ["@variable.css"] = { fg = "#9966CC" },
+
+                    ["@attribute.css"] = { fg = "#56B6C2", priority = 99 },
 
                     NeoTreeDirectoryName = { fg = "$white" },
                     NeoTreeFileName = { fg = "$white" },
 
                     -- NeoTreeGitAdded      = { fg = "#ffffff" },
-                    -- NeoTreeGitDeleted    = { fg = "#ffffff" },
+                   -- NeoTreeGitDeleted    = { fg = "#ffffff" },
                     -- NeoTreeGitModified   = { fg = "#ffffff" },
                     -- NeoTreeGitConflict   = { fg = "#ffffff" },
                     -- NeoTreeGitUntracked  = { fg = "#ffffff" },
