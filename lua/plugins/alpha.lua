@@ -35,7 +35,7 @@ return {
 		dashboard.section.buttons.val = {
 			dashboard.button("n", " New file", ":ene <BAR> startinsert <CR>"),
 			dashboard.button("e", "  Open tree", ":Neotree toggle <CR>"),
-			dashboard.button("r", "  Recent", ":Telescope oldfiles <CR>"),
+			dashboard.button("r", "  Recent aa", ":Telescope oldfiles <CR>"),
 			dashboard.button("l", "  Lazy", ":Lazy <CR>"),
 			dashboard.button("q", "󰠚 Quit NVIM", ":qa<CR>"),
 		}
