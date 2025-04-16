@@ -125,8 +125,9 @@ return {
                     ["@property.class.css"] = { fg = "#D19A66" },
                     ["@property"] = { fg = "#ffffff" },
                     ["@property.name"] = { fg = "#ffffff" },
-                    ["@number"] = { fg = "$red" },
-                    ["@string"] = { fg = "#D19A66" },
+                    ["@number"] = { fg = "#D19A66" },
+                    ["@string"] = { fg = "$red" },
+                    ["@string.plain.css"] = { fg = "#D19A66" },
                     ["@markup.heading.1.html"] = { fg = "$white" },
                     ["@markup.heading.2.html"] = { fg = "$white" },
                     ["@markup.heading.3.html"] = { fg = "$white" },
@@ -137,6 +138,7 @@ return {
                     ["@string.html"] = { fg = "#95BF79" },
                     ["@string.javascript"] = { fg = "#95BF79" },
                     ["@variable.css"] = { fg = "#9966CC" },
+                    ["@variable.builtin.javascript"] = { fg = "#E5C07B" },
 
                     ["@attribute.css"] = { fg = "#56B6C2", priority = 99 },
 
