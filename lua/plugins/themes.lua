@@ -73,6 +73,48 @@ return {
                     },
                     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
                 },
+                -- Custom Highlights --
+                colors = {
+                    white = "#ffffff",
+                    red = "#E06C75",
+                }, -- Override default colors
+                highlights = {
+                    ["@tag"] = { fg = "$red" },
+                    ["@tag.delimiter"] = { fg = "$white" },
+                    ["@tag.css"] = { fg = "$red" },
+                    ["@type.tag.css"] = { fg = "$red" },
+                    ["@property.id.css"] = { fg = "#61AFEE" },
+                    ["@property.class.css"] = { fg = "#D19A66" },
+                    ["@property"] = { fg = "#ffffff" },
+                    ["@property.name"] = { fg = "#ffffff" },
+                    ["@number"] = { fg = "#D19A66" },
+                    ["@string"] = { fg = "$red" },
+                    ["@string.plain.css"] = { fg = "#D19A66" },
+                    ["@markup.heading.1.html"] = { fg = "$white" },
+                    ["@markup.heading.2.html"] = { fg = "$white" },
+                    ["@markup.heading.3.html"] = { fg = "$white" },
+                    ["@markup.heading.4.html"] = { fg = "$white" },
+                    ["@markup.heading.5.html"] = { fg = "$white" },
+                    ["@markup.heading.6.html"] = { fg = "$white" },
+                    ["@markup.heading.html"] = { fg = "$white" },
+                    ["@string.html"] = { fg = "#95BF79" },
+                    ["@string.javascript"] = { fg = "#95BF79" },
+                    ["@variable.css"] = { fg = "#9966CC" },
+                    ["@variable.builtin.javascript"] = { fg = "#E5C07B" },
+                    ["jsonKeywor"] = { fg = "$red" },
+
+                    ["@attribute.css"] = { fg = "#56B6C2", priority = 99 },
+
+                    NeoTreeDirectoryName = { fg = "$white" },
+                    NeoTreeFileName = { fg = "$white" },
+
+                    -- NeoTreeGitAdded      = { fg = "#ffffff" },
+                   -- NeoTreeGitDeleted    = { fg = "#ffffff" },
+                    -- NeoTreeGitModified   = { fg = "#ffffff" },
+                    -- NeoTreeGitConflict   = { fg = "#ffffff" },
+                    -- NeoTreeGitUntracked  = { fg = "#ffffff" },
+                    -- ["@"] = { fg = "#E06C75" },
+                }, -- Override highlight groups
             })
 
             -- setup must be called before loading
@@ -139,6 +181,7 @@ return {
                     ["@string.javascript"] = { fg = "#95BF79" },
                     ["@variable.css"] = { fg = "#9966CC" },
                     ["@variable.builtin.javascript"] = { fg = "#E5C07B" },
+                    ["jsonKeywor"] = { fg = "$red" },
 
                     ["@attribute.css"] = { fg = "#56B6C2", priority = 99 },
 

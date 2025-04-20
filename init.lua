@@ -4,7 +4,7 @@ require("config.keymaps")
 require("config.options")
 require("config.lazy")
 
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme catppuccin")
 -- vim.cmd("colorscheme catppuccin")
 vim.api.nvim_create_user_command("HighlightNone", function()
     vim.cmd([[
